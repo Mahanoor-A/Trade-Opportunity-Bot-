@@ -1,0 +1,656 @@
+{
+ "FEC": {
+  "rates": [
+   "forwardRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "SWAP": {
+  "rates": [
+   "spotRate",
+   "swapRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Vanilla": {
+  "rates": [
+   "protectionRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Vanilla (Deferred Premium)": {
+  "rates": [
+   "protectionRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Ratio": {
+  "rates": [
+   "enhancedRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Accelerator": {
+  "rates": [
+   "protectionRate",
+   "limitRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Accumulator": {
+  "rates": [
+   "enhancedRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Accumulator (LEV)": {
+  "rates": [
+   "enhancedRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Participator": {
+  "rates": [
+   "protectionRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Participating Collar": {
+  "rates": [
+   "protectionRate",
+   "participationRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Participating Collar (LEV)": {
+  "rates": [
+   "protectionRate",
+   "participationRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": true
+ },
+ "Participating Knock In": {
+  "rates": [
+   "protectionRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Participating Knock In (LEV)": {
+  "rates": [
+   "protectionRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Participating KO Conv.": {
+  "rates": [
+   "protectionRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Participating KO Conv. (LEV)": {
+  "rates": [
+   "protectionRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Knock In": {
+  "rates": [
+   "protectionRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Knock In (LEV)": {
+  "rates": [
+   "protectionRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Knock In Collar": {
+  "rates": [
+   "protectionRate",
+   "participationRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Knock In Collar (LEV)": {
+  "rates": [
+   "protectionRate",
+   "participationRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Knock In Conv.": {
+  "rates": [
+   "protectionRate",
+   "knockOutRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Knock In Conv. (LEV)": {
+  "rates": [
+   "protectionRate",
+   "knockOutRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Knock In Reset": {
+  "rates": [
+   "protectionRate",
+   "resetRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Knock In Reset (LEV)": {
+  "rates": [
+   "protectionRate",
+   "resetRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "KIKO": {
+  "rates": [
+   "protectionRate",
+   "knockInRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "KIKO (LEV)": {
+  "rates": [
+   "protectionRate",
+   "knockInRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Knock Out": {
+  "rates": [
+   "enhancedRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Knock Out (LEV)": {
+  "rates": [
+   "enhancedRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Knock Out Collar": {
+  "rates": [
+   "enhancedRate",
+   "participationRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Knock Out Collar (LEV)": {
+  "rates": [
+   "enhancedRate",
+   "participationRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Knock Out Conv.": {
+  "rates": [
+   "protectionRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Knock Out Conv. (LEV)": {
+  "rates": [
+   "protectionRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Knock Out Reset": {
+  "rates": [
+   "enhancedRate",
+   "protectionRate",
+   "lowTrigger",
+   "highTrigger"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Knock Out Reset (LEV)": {
+  "rates": [
+   "enhancedRate",
+   "protectionRate",
+   "lowTrigger",
+   "highTrigger"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Collar": {
+  "rates": [
+   "protectionRate",
+   "participationRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Collar (LEV)": {
+  "rates": [
+   "protectionRate",
+   "participationRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": true
+ },
+ "Collar Plus": {
+  "rates": [
+   "protectionRate",
+   "participationRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Collar Plus (LEV)": {
+  "rates": [
+   "protectionRate",
+   "participationRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Inverted Knock In": {
+  "rates": [
+   "protectionRate",
+   "enhancedRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Inverted Knock In (LEV)": {
+  "rates": [
+   "protectionRate",
+   "enhancedRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Dynamic Forward": {
+  "rates": [
+   "enhancedRate",
+   "knockOutTriggerRate",
+   "knockInTriggerRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Dynamic Forward (LEV)": {
+  "rates": [
+   "enhancedRate",
+   "knockOutTriggerRate",
+   "knockInTriggerRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Extendible": {
+  "rates": [
+   "enhancedRateAndKnockInRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Extendible (LEV)": {
+  "rates": [
+   "enhancedRateAndKnockInRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": true
+ },
+ "Dynamic Improver": {
+  "rates": [
+   "capRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Dynamic Improver (LEV)": {
+  "rates": [
+   "capRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Knock In Improver": {
+  "rates": [
+   "protectionRate",
+   "knockOutTriggerRate",
+   "knockInTriggerRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Knock In Improver (LEV)": {
+  "rates": [
+   "protectionRate",
+   "knockOutTriggerRate",
+   "knockInTriggerRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Tracker": {
+  "rates": [
+   "protectionRate",
+   "limitRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Tracker (LEV)": {
+  "rates": [
+   "protectionRate",
+   "limitRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": true
+ },
+ "Capped FEC": {
+  "rates": [
+   "enhancedRate",
+   "variationRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Capped FEC (LEV)": {
+  "rates": [
+   "enhancedRate",
+   "variationRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": true
+ },
+ "Capped FEC w Protection": {
+  "rates": [
+   "enhancedRate",
+   "variationRate",
+   "protectionRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Capped FEC w Protection (LEV)": {
+  "rates": [
+   "enhancedRate",
+   "variationRate",
+   "protectionRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": true
+ },
+ "Seagull": {
+  "rates": [
+   "enhancedRate",
+   "participationRate",
+   "variationRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Seagull (LEV)": {
+  "rates": [
+   "enhancedRate",
+   "participationRate",
+   "variationRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": true
+ },
+ "Enhanced FEC": {
+  "rates": [
+   "enhancedRate",
+   "rate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "Enhanced FEC (LEV)": {
+  "rates": [
+   "enhancedRate",
+   "rate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": true
+ },
+ "Knock In Barrier": {
+  "rates": [
+   "protectionRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Knock Out Barrier": {
+  "rates": [
+   "protectionRate",
+   "knockOutRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "Sold Vanilla": {
+  "rates": [
+   "protectionRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "TARF": {
+  "rates": [
+   "enhancedRate"
+  ],
+  "target": true,
+  "barrier": false,
+  "lev": false
+ },
+ "TARF (LEV)": {
+  "rates": [
+   "enhancedRate"
+  ],
+  "target": true,
+  "barrier": false,
+  "lev": true
+ },
+ "EKI TARF": {
+  "rates": [
+   "enhancedRate",
+   "knockInRate"
+  ],
+  "target": true,
+  "barrier": true,
+  "lev": false
+ },
+ "EKI TARF (LEV)": {
+  "rates": [
+   "enhancedRate",
+   "knockInRate"
+  ],
+  "target": true,
+  "barrier": true,
+  "lev": true
+ },
+ "TARF Guaranteed Count": {
+  "rates": [
+   "enhancedRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ },
+ "TARF Guaranteed Count (LEV)": {
+  "rates": [
+   "enhancedRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": true
+ },
+ "EKI TARF Guaranteed Count": {
+  "rates": [
+   "enhancedRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": false
+ },
+ "EKI TARF Guaranteed Count (LEV)": {
+  "rates": [
+   "enhancedRate",
+   "knockInRate"
+  ],
+  "target": false,
+  "barrier": true,
+  "lev": true
+ },
+ "Pivot TARF": {
+  "rates": [
+   "lowStrikeEnhancedRate",
+   "pivot",
+   "highStrikeEnhancedRate"
+  ],
+  "target": true,
+  "barrier": false,
+  "lev": false
+ },
+ "Pivot TARF (LEV)": {
+  "rates": [
+   "lowStrikeEnhancedRate",
+   "pivot",
+   "highStrikeEnhancedRate"
+  ],
+  "target": true,
+  "barrier": false,
+  "lev": true
+ },
+ "NDF": {
+  "rates": [
+   "ndfRate"
+  ],
+  "target": false,
+  "barrier": false,
+  "lev": false
+ }
+}

@@ -1,0 +1,1231 @@
+[
+  {
+    "name": "FEC",
+    "classification": "Protect",
+    "family": "FEC",
+    "sourceSheet": "FEC",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "SWAP",
+    "classification": "n/a",
+    "family": "SWAP",
+    "sourceSheet": "SWAP",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Vanilla",
+    "classification": "Protect",
+    "family": "Vanilla",
+    "sourceSheet": "Vanilla",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Vanilla (Deferred Premium)",
+    "classification": "Protect",
+    "family": "Vanilla (Deferred Premium)",
+    "sourceSheet": "Vanilla (Deferred Premium)",
+    "leveragedVariant": false,
+    "features": [
+      "Deferred Premium"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Ratio",
+    "classification": "Enhanced",
+    "family": "Ratio",
+    "sourceSheet": "Ratio",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Accelerator",
+    "classification": "Protect",
+    "family": "Accelerator",
+    "sourceSheet": "Accelerator",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Accumulator",
+    "classification": "Enhanced",
+    "family": "Accumulator",
+    "sourceSheet": "Accumulator",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Accumulator (LEV)",
+    "classification": "Enhanced",
+    "family": "Accumulator",
+    "sourceSheet": "Accumulator",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Participator",
+    "classification": "Protect",
+    "family": "Participator",
+    "sourceSheet": "Participator",
+    "leveragedVariant": false,
+    "features": [
+      "Participating"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Participating Collar",
+    "classification": "Protect",
+    "family": "Participating Collar",
+    "sourceSheet": "Participating Collar",
+    "leveragedVariant": false,
+    "features": [
+      "Collar",
+      "Participating"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Participating Collar (LEV)",
+    "classification": "Enhanced",
+    "family": "Participating Collar",
+    "sourceSheet": "Participating Collar",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Collar",
+      "Participating"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Participating Knock In",
+    "classification": "Participation",
+    "family": "Participating Knock In",
+    "sourceSheet": "Participating Knock In",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-In",
+      "Participating"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Participating Knock In (LEV)",
+    "classification": "Enhanced",
+    "family": "Participating Knock In",
+    "sourceSheet": "Participating Knock In",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-In",
+      "Participating"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Participating KO Conv.",
+    "classification": "Protect",
+    "family": "Participating KO Convertible",
+    "sourceSheet": "Participating KO Conv.",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-Out",
+      "Participating",
+      "Convertible"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Participating KO Conv. (LEV)",
+    "classification": "Enhanced",
+    "family": "Participating KO Convertible",
+    "sourceSheet": "Participating KO Conv.",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-Out",
+      "Participating",
+      "Convertible"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock In",
+    "classification": "Participation",
+    "family": "Knock In",
+    "sourceSheet": "Knock In",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-In"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock In (LEV)",
+    "classification": "Enhanced",
+    "family": "Knock In",
+    "sourceSheet": "Knock In",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-In"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock In Collar",
+    "classification": "Participation",
+    "family": "Knock In Collar",
+    "sourceSheet": "Knock In Collar",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-In",
+      "Collar"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock In Collar (LEV)",
+    "classification": "Enhanced",
+    "family": "Knock In Collar",
+    "sourceSheet": "Knock In Collar",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-In",
+      "Collar"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock In Conv.",
+    "classification": "Participation",
+    "family": "Knock In Convertible",
+    "sourceSheet": "Knock In Conv.",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-In",
+      "Convertible"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock In Conv. (LEV)",
+    "classification": "Enhanced",
+    "family": "Knock In Convertible",
+    "sourceSheet": "Knock In Conv.",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-In",
+      "Convertible"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock In Reset",
+    "classification": "Participation",
+    "family": "Knock In Reset",
+    "sourceSheet": "Knock In Reset",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-In",
+      "Reset"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock In Reset (LEV)",
+    "classification": "Enhanced",
+    "family": "Knock In Reset",
+    "sourceSheet": "Knock In Reset",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-In",
+      "Reset"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "KIKO",
+    "classification": "Enhanced",
+    "family": "KIKO",
+    "sourceSheet": "KIKO",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-In",
+      "Knock-Out"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "KIKO (LEV)",
+    "classification": "Enhanced",
+    "family": "KIKO",
+    "sourceSheet": "KIKO",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-In",
+      "Knock-Out"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock Out",
+    "classification": "Enhanced",
+    "family": "Knock Out",
+    "sourceSheet": "Knock Out",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-Out"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock Out (LEV)",
+    "classification": "Enhanced",
+    "family": "Knock Out",
+    "sourceSheet": "Knock Out",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-Out"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock Out Collar",
+    "classification": "Enhanced",
+    "family": "Knock Out Collar",
+    "sourceSheet": "Knock Out Collar",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-Out",
+      "Collar"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock Out Collar (LEV)",
+    "classification": "Enhanced",
+    "family": "Knock Out Collar",
+    "sourceSheet": "Knock Out Collar",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-Out",
+      "Collar"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock Out Conv.",
+    "classification": "Enhanced",
+    "family": "Knock Out Convertible",
+    "sourceSheet": "Knock Out Conv.",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-Out",
+      "Convertible"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock Out Conv. (LEV)",
+    "classification": "Enhanced",
+    "family": "Knock Out Convertible",
+    "sourceSheet": "Knock Out Conv.",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-Out",
+      "Convertible"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock Out Reset",
+    "classification": "Participation",
+    "family": "Knock Out Reset",
+    "sourceSheet": "Knock Out Reset",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-Out",
+      "Reset"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock Out Reset (LEV)",
+    "classification": "Enhanced",
+    "family": "Knock Out Reset",
+    "sourceSheet": "Knock Out Reset",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-Out",
+      "Reset"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Collar",
+    "classification": "Protect",
+    "family": "Collar",
+    "sourceSheet": "Collar",
+    "leveragedVariant": false,
+    "features": [
+      "Collar"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Collar (LEV)",
+    "classification": "Enhanced",
+    "family": "Collar",
+    "sourceSheet": "Collar",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Collar"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Collar Plus",
+    "classification": "Participation",
+    "family": "Collar Plus",
+    "sourceSheet": "Collar Plus",
+    "leveragedVariant": false,
+    "features": [
+      "Collar"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Collar Plus (LEV)",
+    "classification": "Enhanced",
+    "family": "Collar Plus",
+    "sourceSheet": "Collar Plus",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Collar"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Inverted Knock In",
+    "classification": "Participation",
+    "family": "Inverted Knock In",
+    "sourceSheet": "Inverted Knock In",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-In"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Inverted Knock In (LEV)",
+    "classification": "Enhanced",
+    "family": "Inverted Knock In",
+    "sourceSheet": "Inverted Knock In",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-In"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Dynamic Forward",
+    "classification": "Participation",
+    "family": "Dynamic Forward",
+    "sourceSheet": "Dynamic Forward",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Dynamic Forward (LEV)",
+    "classification": "Enhanced",
+    "family": "Dynamic Forward",
+    "sourceSheet": "Dynamic Forward",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Extendible",
+    "classification": "Participation",
+    "family": "Extendible",
+    "sourceSheet": "Extendible",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Extendible (LEV)",
+    "classification": "Enhanced",
+    "family": "Extendible",
+    "sourceSheet": "Extendible",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Dynamic Improver",
+    "classification": "Participation",
+    "family": "Dynamic Improver",
+    "sourceSheet": "Dynamic Improver",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-Out"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Dynamic Improver (LEV)",
+    "classification": "Enhanced",
+    "family": "Dynamic Improver",
+    "sourceSheet": "Dynamic Improver",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-Out"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock In Improver",
+    "classification": "Participation",
+    "family": "Knock In Improver",
+    "sourceSheet": "Knock In Improver",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-In"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock In Improver (LEV)",
+    "classification": "Enhanced",
+    "family": "Knock In Improver",
+    "sourceSheet": "Knock In Improver",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-In"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Tracker",
+    "classification": "Protect",
+    "family": "Tracker",
+    "sourceSheet": "Tracker",
+    "leveragedVariant": false,
+    "features": [
+      "Tracker"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Tracker (LEV)",
+    "classification": "Enhanced",
+    "family": "Tracker",
+    "sourceSheet": "Tracker",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Tracker"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Capped FEC",
+    "classification": "Enhanced",
+    "family": "Capped FEC",
+    "sourceSheet": "Capped FEC",
+    "leveragedVariant": false,
+    "features": [
+      "Cap"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Capped FEC (LEV)",
+    "classification": "Enhanced",
+    "family": "Capped FEC",
+    "sourceSheet": "Capped FEC",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Cap"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Capped FEC w Protection",
+    "classification": "Participation",
+    "family": "Capped FEC w Protection",
+    "sourceSheet": "Capped FEC w Protection",
+    "leveragedVariant": false,
+    "features": [
+      "Cap"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Capped FEC w Protection (LEV)",
+    "classification": "Enhanced",
+    "family": "Capped FEC w Protection",
+    "sourceSheet": "Capped FEC w Protection",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Cap"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Seagull",
+    "classification": "Enhanced",
+    "family": "Seagull",
+    "sourceSheet": "Seagull",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Seagull (LEV)",
+    "classification": "Enhanced",
+    "family": "Seagull",
+    "sourceSheet": "Seagull",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Enhanced FEC",
+    "classification": "Enhanced",
+    "family": "Enhanced FEC",
+    "sourceSheet": "Enhanced FEC",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Enhanced FEC (LEV)",
+    "classification": "Enhanced",
+    "family": "Enhanced FEC",
+    "sourceSheet": "Enhanced FEC",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock In Barrier",
+    "classification": "Enhanced",
+    "family": "Knock In Barrier",
+    "sourceSheet": "Knock In Barrier",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-In"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Knock Out Barrier",
+    "classification": "Enhanced",
+    "family": "Knock Out Barrier",
+    "sourceSheet": "Knock Out Barrier",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-Out"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Sold Vanilla",
+    "classification": "Enhanced",
+    "family": "Sold Vanilla",
+    "sourceSheet": "Sold Vanilla",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "TARF",
+    "classification": "Enhanced",
+    "family": "TARF",
+    "sourceSheet": "TARF beta",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "TARF (LEV)",
+    "classification": "Enhanced",
+    "family": "TARF",
+    "sourceSheet": "TARF beta",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "EKI TARF",
+    "classification": "Enhanced",
+    "family": "TARF",
+    "sourceSheet": "EKI TARF",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-In"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "EKI TARF (LEV)",
+    "classification": "Enhanced",
+    "family": "TARF",
+    "sourceSheet": "EKI TARF",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-In"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "TARF Guaranteed Count",
+    "classification": "Enhanced",
+    "family": "TARF",
+    "sourceSheet": "TARF Guaranteed Count",
+    "leveragedVariant": false,
+    "features": [
+      "Guarantee Count"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "TARF Guaranteed Count (LEV)",
+    "classification": "Enhanced",
+    "family": "TARF",
+    "sourceSheet": "TARF Guaranteed Count",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Guarantee Count"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "EKI TARF Guaranteed Count",
+    "classification": "Enhanced",
+    "family": "TARF",
+    "sourceSheet": "EKI TARF Guaranteed Count",
+    "leveragedVariant": false,
+    "features": [
+      "Knock-In",
+      "Guarantee Count"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "EKI TARF Guaranteed Count (LEV)",
+    "classification": "Enhanced",
+    "family": "TARF",
+    "sourceSheet": "EKI TARF Guaranteed Count",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Knock-In",
+      "Guarantee Count"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Pivot TARF",
+    "classification": "Enhanced",
+    "family": "TARF",
+    "sourceSheet": "Pivot TARF",
+    "leveragedVariant": false,
+    "features": [
+      "Pivot"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "Pivot TARF (LEV)",
+    "classification": "Enhanced",
+    "family": "TARF",
+    "sourceSheet": "Pivot TARF",
+    "leveragedVariant": true,
+    "features": [
+      "Leverage",
+      "Pivot"
+    ],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  },
+  {
+    "name": "NDF",
+    "classification": "Protect",
+    "family": "NDF",
+    "sourceSheet": "NDF",
+    "leveragedVariant": false,
+    "features": [],
+    "regions": [
+      "Australia",
+      "New Zealand",
+      "Singapore",
+      "Canada",
+      "United States"
+    ]
+  }
+]
