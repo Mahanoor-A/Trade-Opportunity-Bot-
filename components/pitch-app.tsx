@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
+import { PortalNav } from "@/components/portal-shell";
 import type { Card, Pitch, SectionKey, TradeParameters } from "@/lib/types";
 
 const sections: { key: SectionKey; title: string; description: string; kicker: string }[] = [
@@ -415,7 +416,7 @@ export function PitchApp() {
           <Image className="brand-mark" src="/foundry-mark.svg" alt="" width={42} height={42} priority />
           <span className="brand-text"><strong>FOUNDRY</strong><small>FX STRUCTURING PLATFORM FOR SALES</small></span>
         </div>
-        <div className="topbar-right"><span className="private-pill"><Icon name="shield" size={14} /> OPEN WORKSPACE</span></div>
+        <div className="topbar-right"><PortalNav /><span className="private-pill"><Icon name="shield" size={14} /> OPEN WORKSPACE</span></div>
       </header>
 
       <main className="main-shell">
