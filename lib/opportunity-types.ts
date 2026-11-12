@@ -30,6 +30,8 @@ export type ClientExposure = {
   horizon_months: number | null;
   /** Next payment/receipt date (YYYY-MM-DD), if known. */
   next_settlement_date: string | null;
+  /** Amount due on the next settlement date (same currency as amount), if known. */
+  next_settlement_amount: string | null;
 };
 
 export type HedgingPolicy = {
@@ -135,6 +137,10 @@ export type DealSuggestion = {
   exposure_id: string;
   recommended_bucket: RiskBucket;
   recommendation_reason: string;
+  /** The bucket shown on the dashboard's product-opp box for this client. */
+  dashboard_bucket: RiskBucket;
+  /** Plain-English explanation of where the pre-filled notional and maturity came from. */
+  prefill_basis: string;
   options: Record<RiskBucket, DealOption>;
   reasons: OpportunityReason[];
   market: MarketFact | null;

@@ -71,6 +71,10 @@ function parseExposure(value: unknown, index: number): ClientExposure {
   if (date && (!/^\d{4}-\d{2}-\d{2}$/.test(date) || Number.isNaN(Date.parse(date)))) {
     throw new ApiInputError(`${label} settlement date must be YYYY-MM-DD`);
   }
+  const settlementAmount = positiveDecimal(raw.next_settlement_amount, `${label} next settlement amount`, true);
+  if (settlementAmount !== null && Number(settlementAmount) > Number(amount)) {
+    throw new ApiInputError(`${label} next settlement amount cannot exceed the total exposure amount`);
+  }
   const id = typeof raw.id === "string" && /^[A-Za-z0-9-]{1,64}$/.test(raw.id) ? raw.id : randomUUID();
   return {
     id,
@@ -84,6 +88,7 @@ function parseExposure(value: unknown, index: number): ClientExposure {
     hedged_rate: positiveDecimal(raw.hedged_rate, `${label} average hedged rate`, true),
     horizon_months: months(raw.horizon_months, `${label} horizon`),
     next_settlement_date: date || null,
+    next_settlement_amount: settlementAmount,
   };
 }
 

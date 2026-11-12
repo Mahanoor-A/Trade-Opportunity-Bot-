@@ -11,6 +11,7 @@ type DashboardData = {
   local_date: string;
   run: OpportunityRun | null;
   is_today: boolean;
+  refreshed_run: OpportunityRun | null;
 };
 
 const COUNTS = [1, 2, 3, 4, 5, 6, 8, 10, 15, 20];
@@ -34,6 +35,7 @@ export function OpportunityDashboard() {
   const [notice, setNotice] = useState("");
   const [collapsed, setCollapsed] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [view, setView] = useState<"daily" | "refreshed">("daily");
   const tz = typeof window === "undefined" ? "UTC" : browserTimezone();
 
   const load = useCallback(async () => {
@@ -60,7 +62,8 @@ export function OpportunityDashboard() {
     try {
       const result = await api<DashboardData>(`/api/v1/opportunities?tz=${encodeURIComponent(tz)}`, { method: "POST" });
       setData(result);
-      setNotice("Opportunities regenerated from current profiles and rates.");
+      setView("refreshed");
+      setNotice("Refreshed from current profiles and rates. Your 8am list is kept under its own tab.");
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : "Could not regenerate");
     } finally {
@@ -84,7 +87,10 @@ export function OpportunityDashboard() {
     }
   }
 
-  const run = data?.run ?? null;
+  const dailyRun = data?.run ?? null;
+  const refreshedRun = data?.refreshed_run ?? null;
+  const run = (view === "refreshed" || !dailyRun) && refreshedRun ? refreshedRun : dailyRun;
+  const showingRefresh = run !== null && run === refreshedRun;
   const settingsChanged =
     !!draft && !!data && (!data.settings_saved || JSON.stringify(draft) !== JSON.stringify(data.settings));
 
@@ -123,9 +129,19 @@ export function OpportunityDashboard() {
             <p className="panel-sub">
               Each box is calculated from the client profile and live rates. Hover a box for the numbers behind it.
               {run && (
-                <> Generated {new Date(run.generated_at).toLocaleString()} ({run.trigger.replace("_", " ")}){!data?.is_today && " · this is the previous run; today's runs at the scheduled hour"}.</>
+                <> {showingRefresh ? "Refreshed" : "Generated"} {new Date(run.generated_at).toLocaleString()}{!showingRefresh && !data?.is_today && " · this is the previous daily list; today's is generated at the scheduled hour"}.</>
               )}
             </p>
+            {refreshedRun && (
+              <div className="segmented" role="tablist" aria-label="Which list to show" style={{ marginTop: 10 }}>
+                <button type="button" role="tab" aria-selected={!showingRefresh} className={!showingRefresh ? "on" : ""} onClick={() => setView("daily")} disabled={!dailyRun}>
+                  {dailyRun?.run_date === data?.local_date ? "Today's daily list" : "Last daily list"}
+                </button>
+                <button type="button" role="tab" aria-selected={showingRefresh} className={showingRefresh ? "on" : ""} onClick={() => setView("refreshed")}>
+                  Refreshed {new Date(refreshedRun.generated_at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                </button>
+              </div>
+            )}
           </div>
           {draft && (showSettings || !data?.settings_saved) && (
             <div className="opp-controls">
@@ -176,7 +192,6 @@ export function OpportunityDashboard() {
                   ))}
                 </div>
                 <div className="opp-actions">
-                  <span className="bucket-pill" title="Rule-based starting bucket; the AI Generate popup lets you change it">{item.suggested_bucket}</span>
                   <Link
                     className="button button-primary"
                     href={`/deal-builder?client=${encodeURIComponent(item.client_id)}&exposure=${encodeURIComponent(item.exposure_id)}&generate=1`}

@@ -168,8 +168,10 @@ function settlementReason(exposure: ClientExposure, today: string): OpportunityR
     kind: "settlement_due",
     exposure_id: exposure.id,
     title: days === 0 ? "Settlement due today" : `Settlement due in ${days} day${days === 1 ? "" : "s"}`,
-    detail: `${exposure.label}: next settlement ${exposure.next_settlement_date}. ${
-      exposure.hedged_amount === null ? "No hedged amount is recorded." : `${formatAmount(uncovered, exposure.amount_currency)} is uncovered.`
+    detail: `${exposure.label}: next settlement ${exposure.next_settlement_date}${
+      exposure.next_settlement_amount !== null ? ` for ${formatAmount(Number(exposure.next_settlement_amount), exposure.amount_currency)}` : ""
+    }. ${
+      exposure.hedged_amount === null ? "No hedged amount is recorded." : `${formatAmount(uncovered, exposure.amount_currency)} of the total exposure is uncovered.`
     }`,
     tone: "risk",
     score: 35 + (SETTLEMENT_WINDOW_DAYS - days) / 1.5,

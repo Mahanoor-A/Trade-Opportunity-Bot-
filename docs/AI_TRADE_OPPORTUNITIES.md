@@ -30,8 +30,13 @@ the total score of their top 3 factual reasons. The panel can be collapsed, and
 the settings icon holds the per-day count, run hour and timezone.
 
 In the deal builder, clients flagged on today's dashboard are listed first and
-marked ★. Maturity is always pre-filled as a date: the next settlement date, or
-today plus the horizon capped at the policy's maximum tenor. The learning history
+marked ★. Notional and maturity always describe the same cash flow. If the
+next settlement amount and date are both on the profile, those are used.
+Otherwise it uses the gap to the hedging policy and today plus the horizon,
+capped at the policy's maximum tenor. The client's budget rate is carried as a
+reference rate only. The popup's AI pick follows the dashboard's product-opp
+bucket unless the AI explains why it differs. A manual refresh never replaces
+the day's 8am list; it appears under its own tab. The learning history
 records the bucket, product, notional, dates, strike and product inputs the
 advisor actually used.
 

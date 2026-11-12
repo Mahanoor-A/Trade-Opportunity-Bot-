@@ -80,6 +80,19 @@ export async function latestRun(advisorId: string): Promise<OpportunityRun | nul
   return record ? record.payload : null;
 }
 
+async function recentRuns(advisorId: string): Promise<OpportunityRun[]> {
+  return (await listRecords<OpportunityRun>("runs", advisorId, 50)).map((record) => record.payload);
+}
+
+/** The daily (8am) list: scheduled, or generated on first open after the run hour. Manual refreshes never replace it. */
+function dailyRunFrom(runs: OpportunityRun[]): OpportunityRun | null {
+  return runs.find((run) => run.trigger !== "manual") ?? null;
+}
+
+export async function latestDailyRun(advisorId: string): Promise<OpportunityRun | null> {
+  return dailyRunFrom(await recentRuns(advisorId));
+}
+
 export async function generateRun(
   advisorId: string,
   settings: OpportunitySettings,
@@ -111,16 +124,19 @@ export async function generateRun(
 const inFlight = new Map<string, Promise<OpportunityRun>>();
 
 function generateOnce(advisorId: string, settings: OpportunitySettings, trigger: OpportunityRun["trigger"]) {
-  const existing = inFlight.get(advisorId);
+  // Daily and manual runs are de-duplicated separately so a refresh never stands in for the 8am list.
+  const key = `${advisorId}:${trigger === "manual" ? "manual" : "daily"}`;
+  const existing = inFlight.get(key);
   if (existing) return existing;
-  const promise = generateRun(advisorId, settings, trigger).finally(() => inFlight.delete(advisorId));
-  inFlight.set(advisorId, promise);
+  const promise = generateRun(advisorId, settings, trigger).finally(() => inFlight.delete(key));
+  inFlight.set(key, promise);
   return promise;
 }
 
-function isDue(settings: OpportunitySettings, latest: OpportunityRun | null): boolean {
+/** Due when the local run hour has passed and today's daily list does not exist yet (manual refreshes don't count). */
+function isDue(settings: OpportunitySettings, latestDaily: OpportunityRun | null): boolean {
   const now = localNow(settings.timezone);
-  return now.hour >= settings.generation_hour && latest?.run_date !== now.date;
+  return now.hour >= settings.generation_hour && latestDaily?.run_date !== now.date;
 }
 
 /**
@@ -129,14 +145,24 @@ function isDue(settings: OpportunitySettings, latest: OpportunityRun | null): bo
  */
 export async function getDashboardRun(advisorId: string, browserTimezone?: string | null) {
   const { settings, saved } = await getSettings(advisorId, browserTimezone);
-  let run = await latestRun(advisorId);
+  const runs = await recentRuns(advisorId);
+  let run = dailyRunFrom(runs);
   if (isDue(settings, run)) run = await generateOnce(advisorId, settings, "on_open");
   const now = localNow(settings.timezone);
+  // Latest manual refresh made today after the daily list; shown alongside it, never instead of it.
+  const refreshed =
+    runs.find(
+      (item) =>
+        item.trigger === "manual" &&
+        item.run_date === now.date &&
+        (!run || run.run_date !== now.date || item.generated_at > run.generated_at),
+    ) ?? null;
   return {
     settings,
     settings_saved: saved,
     local_date: now.date,
     run,
+    refreshed_run: refreshed,
     is_today: run?.run_date === now.date,
   };
 }
@@ -152,7 +178,7 @@ export async function runDueForAllAdvisors(): Promise<{ advisor_id: string; stat
   for (const record of await listAllRecords<OpportunitySettings>("settings")) {
     const advisorId = record.advisor_id;
     try {
-      if (!isDue(record.payload, await latestRun(advisorId))) {
+      if (!isDue(record.payload, await latestDailyRun(advisorId))) {
         results.push({ advisor_id: advisorId, status: "not_due" });
         continue;
       }
