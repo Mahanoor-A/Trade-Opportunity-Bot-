@@ -20,6 +20,7 @@ type ExposureForm = {
   hedged_rate: string;
   horizon_months: string;
   next_settlement_date: string;
+  next_settlement_amount: string;
 };
 
 type ClientForm = {
@@ -52,6 +53,7 @@ function emptyExposure(): ExposureForm {
     hedged_rate: "",
     horizon_months: "12",
     next_settlement_date: "",
+    next_settlement_amount: "",
   };
 }
 
@@ -101,6 +103,7 @@ function toForm(client: ClientProfile): ClientForm {
       hedged_rate: s(exposure.hedged_rate),
       horizon_months: s(exposure.horizon_months),
       next_settlement_date: s(exposure.next_settlement_date),
+      next_settlement_amount: s(exposure.next_settlement_amount),
     })),
     notes: client.notes,
   };
@@ -365,6 +368,7 @@ export function ClientsApp() {
                       <Field label="AVG RATE OF EXISTING HEDGES" hint="Enables the 'average higher' tactic box"><input inputMode="decimal" value={exposure.hedged_rate} onChange={(event) => updateExposure(index, { hedged_rate: event.target.value })} placeholder="e.g. 0.6550" /></Field>
                       <Field label="HORIZON (MONTHS)"><input inputMode="numeric" value={exposure.horizon_months} onChange={(event) => updateExposure(index, { horizon_months: event.target.value })} /></Field>
                       <Field label="NEXT SETTLEMENT DATE"><input type="date" value={exposure.next_settlement_date} onChange={(event) => updateExposure(index, { next_settlement_date: event.target.value })} /></Field>
+                      <Field label="NEXT SETTLEMENT AMOUNT" hint="Amount due on that date; used to size the deal"><input inputMode="decimal" value={exposure.next_settlement_amount} onChange={(event) => updateExposure(index, { next_settlement_amount: event.target.value })} placeholder="e.g. 250000" /></Field>
                     </div>
                   </div>
                 );

@@ -208,7 +208,7 @@ export function DealBuilder({ initialClient, initialExposure, autoGenerate }: { 
               <h2>{product}</h2>
               <p className="panel-sub">
                 Bucket: <b style={{ textTransform: "capitalize" }}>{bucket}</b>{bucket === suggestion.recommended_bucket ? " (AI pick)" : " (your override)"}.{" "}
-                Notional is the gap to the hedging policy, maturity comes from the exposure, and strike defaults to the budget rate. Pricing inputs are left for you to set.
+                {suggestion.prefill_basis} The client&apos;s budget rate is shown as a reference only; set the product rates after pricing.
               </p>
             </div>
             <button className="button button-outline" onClick={() => { setPopupBucket(bucket); setPopupOpen(true); }}>Change bucket</button>
@@ -224,7 +224,7 @@ export function DealBuilder({ initialClient, initialExposure, autoGenerate }: { 
             <label className="field">DIRECTION<input value={parameters.direction ?? ""} onChange={(event) => setParam("direction", event.target.value)} /></label>
             <label className="field">NOTIONAL {parameters.notional_currency && <span className="hint">{parameters.notional_currency}</span>}<input inputMode="decimal" value={parameters.notional ?? ""} onChange={(event) => setParam("notional", event.target.value)} placeholder="Enter amount" /></label>
             <label className="field">MATURITY<input value={parameters.maturity ?? ""} onChange={(event) => setParam("maturity", event.target.value)} /></label>
-            <label className="field">STRIKE / BUDGET<input inputMode="decimal" value={parameters.strike ?? ""} onChange={(event) => setParam("strike", event.target.value)} /></label>
+            <label className="field">BUDGET RATE (REFERENCE)<input inputMode="decimal" value={parameters.strike ?? ""} onChange={(event) => setParam("strike", event.target.value)} /><span className="hint">Client budget, not a priced rate</span></label>
             {productInfo?.requirements.barrier && (
               <label className="field">KI BARRIER<input inputMode="decimal" value={parameters.ki_barrier ?? ""} onChange={(event) => setParam("ki_barrier", event.target.value)} placeholder="Set after pricing" /></label>
             )}
@@ -292,7 +292,13 @@ export function DealBuilder({ initialClient, initialExposure, autoGenerate }: { 
                     );
                   })}
                 </div>
-                <div className="ai-reason"><b>Why the AI picked {suggestion.recommended_bucket}:</b> {suggestion.recommendation_reason}</div>
+                <div className="ai-reason">
+                  {suggestion.dashboard_bucket && suggestion.dashboard_bucket !== suggestion.recommended_bucket ? (
+                    <><b>The dashboard suggested {suggestion.dashboard_bucket}; the AI recommends {suggestion.recommended_bucket}.</b> {suggestion.recommendation_reason}</>
+                  ) : (
+                    <><b>Why the AI picked {suggestion.recommended_bucket}{suggestion.dashboard_bucket ? " (same as the dashboard)" : ""}:</b> {suggestion.recommendation_reason}</>
+                  )}
+                </div>
                 {suggestion.notes.length > 0 && <ul className="note-list">{suggestion.notes.map((note) => <li key={note}>{note}</li>)}</ul>}
                 <div className="form-actions">
                   <button className="button button-outline" onClick={() => setPopupOpen(false)}>Cancel</button>
